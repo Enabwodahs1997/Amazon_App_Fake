@@ -87,10 +87,13 @@ header {
     font-weight: bold;
     margin: 10px 0;
 }
-.pro_1 {
+.product1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
     text-decoration: none;
     color: black;
-    border: none;
     cursor: pointer;
     font-weight: bold;
 }
