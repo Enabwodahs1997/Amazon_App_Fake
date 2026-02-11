@@ -4,45 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon-like Store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
-        <div class="logo"><img src="https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png" alt="Amazon" style="height: 40px;"></div>
+        <a class="logo" href="/main.html"><img src="https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png" alt="Amazon" style="height: 40px;"></a>
         <div class="search-bar">
             <input type="text" placeholder="Search products...">
             <button class="search-btn">🔍</button>
         </div>
         <div class="returns">Returns & Orders</div>
-        <button onclick="location.href='checkout/checkout.html'">🛒 Cart</button>
+        <button onclick="location.href='/checkout/checkout.html'">🛒 Cart</button>
     </header>
 
     <div class="products">
-        <div class="product-card">
+        <div class="product-card product1main">
             <img src="images/product1.jpg" alt="Product 1" class="product-image">
-            <h3>Product 1</h3>
-            <p class="price">$29.99</p>
+            <link class="pro_1"><a href="/Products/product.html">Product 1</a></link>
+            <p class="price">$69.99</p>
             <button>Add to Cart</button>
         </div>
-        <div class="product-card">
+        <div class="product-card product2main">
             <img src="images/product2.jpg" alt="Product 2" class="product-image">
             <h3>Product 2</h3>
             <p class="price">$39.99</p>
             <button>Add to Cart</button>
         </div>
-        <div class="product-card">
+        <div class="product-card product3main">
             <img src="images/product3.jpg" alt="Product 3" class="product-image">
             <h3>Product 3</h3>
-            <p class="price">$49.99</p>
+            <p class="price">$29.99</p>
             <button>Add to Cart</button>
         </div>
-        <div class="product-card">
+        <div class="product-card product4main">
             <img src="images/product4.jpg" alt="Product 4" class="product-image">
             <h3>Product 4</h3>
-            <p class="price">$59.99</p>
+            <p class="price">$9.99</p>
             <button>Add to Cart</button>
         </div>
     </div>
 </body>
-<script src="header.js"></script>
+<script src="/header.js"></script>
 </html>

@@ -138,6 +138,30 @@
     color: #c45500;
     font-weight: bold;
 }
+.quantity-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+    color: #0f1111;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+.qty-btn:hover {
+    background-color: #e6e6e6;
+}
+.qty-value {
+    min-width: 20px;
+    text-align: center;
+}
 @media (max-width: 768px) {
     .checkout-container {
         grid-template-columns: 1fr;

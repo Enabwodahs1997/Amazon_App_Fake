@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Amazon</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="../checkout/checkout.css">
 </head>
 <body>
     <header>
-        <div class="logo"><img src="https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png" alt="Amazon" style="height: 40px;"></div>
+        <a class="logo" href="../main.html"><img src="https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png" alt="Amazon" style="height: 40px;"></a>
         <div class="search-bar">
             <input type="text" placeholder="Search products...">
             <button class="search-btn">🔍</button>
         </div>
         <div class="returns">Returns & Orders</div>
-        <button onclick="location.href='../checkout/checkout.html'">🛒 Cart</button>
+        <button onclick="location.href='/checkout/checkout.html'">🛒 Cart</button>
     </header>
     <div class="checkout-header">
         <h1>Checkout</h1>
@@ -95,7 +95,11 @@
                         <div class="cart-item-details">
                             <h3>Product 1</h3>
                             <p class="price">$29.99</p>
-                            <p>Qty: 1</p>
+                            <div class="quantity-control">
+                                <button class="qty-btn qty-decrease" type="button">-</button>
+                                <span class="qty-value">1</span>
+                                <button class="qty-btn qty-increase" type="button">+</button>
+                            </div>
                         </div>
                     </div>
                     <div class="cart-item">
@@ -103,7 +107,11 @@
                         <div class="cart-item-details">
                             <h3>Product 2</h3>
                             <p class="price">$39.99</p>
-                            <p>Qty: 1</p>
+                            <div class="quantity-control">
+                                <button class="qty-btn qty-decrease" type="button">-</button>
+                                <span class="qty-value">1</span>
+                                <button class="qty-btn qty-increase" type="button">+</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,5 +144,6 @@
         </div>
     </div>
 </body>
-<script src="../header.js"></script>
+<script src="/header.js"></script>
+<script type="module" src="/checkout/checkout.js"></script>
 </html>
