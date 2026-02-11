@@ -1,10 +1,16 @@
 import "../style.css";
 import "./checkout.css";
 
-// Normalize quantity values so we never display invalid or zero counts.
+// Normalize quantity values so it will never display invalid or zero counts.
 const parseQuantity = (value) => {
     const parsed = Number.parseInt(value, 10);
     return Number.isNaN(parsed) ? 1 : Math.max(1, parsed);
+};
+
+// Read the current quantity from the badge safely.
+const readQuantity = (valueEl) => {
+    const parsed = Number.parseInt(valueEl.textContent, 10);
+    return Number.isNaN(parsed) ? 1 : parsed;
 };
 
 // Update the visible number in the quantity badge.
@@ -24,14 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Decrease the count, but never below 1.
+        // Decrease the count and remove the item if it reaches 0.
         decreaseButton.addEventListener("click", () => {
-            updateQuantity(valueEl, parseQuantity(valueEl.textContent) - 1);
+            const nextValue = readQuantity(valueEl) - 1;
+            if (nextValue <= 0) {
+                item.remove();
+                return;
+            }
+            updateQuantity(valueEl, nextValue);
         });
 
         // Increase the count by 1.
         increaseButton.addEventListener("click", () => {
-            updateQuantity(valueEl, parseQuantity(valueEl.textContent) + 1);
+            updateQuantity(valueEl, readQuantity(valueEl) + 1);
         });
     });
 });
