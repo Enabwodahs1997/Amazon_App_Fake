@@ -245,6 +245,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Handle checkout button click had to have AI help me fix whatever I screwed up when trying to make this Event listener. The bugger was being stubborn and I made it more complicated than needed.
+    const checkoutButton = document.querySelector(".place-order-btn");
+    if (checkoutButton) {
+        checkoutButton.addEventListener("click", () => {
+            alert("Checkout complete!");
+        });
+    }
+
     // First calculation on page load.
     recalcSummary();
 });
