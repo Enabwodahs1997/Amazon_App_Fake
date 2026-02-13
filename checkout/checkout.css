@@ -144,6 +144,12 @@
     font-size: 16px;
     margin-bottom: 5px;
 }
+.cart-item-details .subtitle {
+    font-size: 13px;
+    color: var(--color-amazon-text-secondary);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
 .cart-item-details .rating {
     display: inline-flex;
     align-items: center;

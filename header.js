@@ -14,6 +14,7 @@ const loadCart = () => {
 
 const saveCart = () => {
     try {
+        console.log('Saving cart to localStorage:', cart);
         localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     } catch (error) {
         console.warn("Failed to save cart to storage:", error);
@@ -28,7 +29,10 @@ export function updateCartDisplay() {
     if (!cartButton) {
         return;
     }
-    cartButton.textContent = `🛒 Cart (${cart.length})`;
+    // Reload cart from storage to get accurate count
+    const currentCart = loadCart();
+    cart = currentCart;
+    cartButton.textContent = `🛒 Cart (${currentCart.length})`;
 }
 
 // Function to add item to cart
@@ -43,6 +47,7 @@ function addToCart(event) {
     const imageEl = productCard.querySelector('.product-image');
     const ratingEl = productCard.querySelector('.stars');
     const ratingCountEl = productCard.querySelector('.rating-count');
+    const subtitleEl = productCard.querySelector('.product-subtitle');
 
     if (!nameEl || !priceEl) {
         return;
@@ -53,21 +58,26 @@ function addToCart(event) {
     const productImage = imageEl ? imageEl.getAttribute('src') : '';
     const productRating = ratingEl ? ratingEl.style.getPropertyValue('--rating') : '0';
     const productRatingCount = ratingCountEl ? ratingCountEl.textContent.trim() : '';
+    const productSubtitle = subtitleEl ? subtitleEl.textContent.trim() : '';
     
     cart.push({ 
         name: productName, 
         price: productPrice, 
         image: productImage,
         rating: productRating,
-        ratingCount: productRatingCount
+        ratingCount: productRatingCount,
+        subtitle: productSubtitle
     });
     saveCart();
     updateCartDisplay();
 }
 
 // Export function to add item to cart from product details
-export function addItemToCart(name, price, image = '', rating = '0', ratingCount = '') {
-    cart.push({ name, price, image, rating, ratingCount });
+export function addItemToCart(name, price, image = '', rating = '0', ratingCount = '', subtitle = '') {
+    console.log('addItemToCart received subtitle:', subtitle);
+    const item = { name, price, image, rating, ratingCount, subtitle };
+    console.log('Pushing item to cart:', item);
+    cart.push(item);
     saveCart();
     updateCartDisplay();
 }

@@ -1,10 +1,14 @@
 import "../style.css";
 import "./checkout.css";
+import { productsData } from "../products-data.js";
+import { updateCartDisplay } from "../header.js";
 
+// Cart management
 
 const TAX_RATE = 0.09;
 const SHIPPING_COST = 5.99;
 const CART_STORAGE_KEY = "amazon_cart";
+
 // Turn any text into a usable whole number (at least 1).
 const parseQuantity = (value) => {
     const parsed = Number.parseInt(value, 10);
@@ -67,6 +71,7 @@ const groupCartItems = (items) => {
             image: item.image || '',
             rating: item.rating || '0',
             ratingCount: item.ratingCount || '',
+            subtitle: item.subtitle || '',
             quantity: 1
         });
     });
@@ -94,6 +99,23 @@ const buildCartItemElement = (item) => {
 
     const title = document.createElement("h3");
     title.textContent = item.name;
+
+    // Get subtitle from productsData if not already in item
+    let subtitle = item.subtitle || '';
+    if (!subtitle) {
+        const product = productsData.find(p => p.name === item.name);
+        if (product) {
+            subtitle = product.subtitle;
+        }
+    }
+
+    // Add subtitle if available
+    let subtitleEl = null;
+    if (subtitle) {
+        subtitleEl = document.createElement("p");
+        subtitleEl.className = "subtitle";
+        subtitleEl.textContent = subtitle;
+    }
 
     // Add rating if available
     let ratingDiv = null;
@@ -137,6 +159,9 @@ const buildCartItemElement = (item) => {
 
     controls.append(minus, qty, plus);
     details.append(title);
+    if (subtitleEl) {
+        details.append(subtitleEl);
+    }
     if (ratingDiv) {
         details.append(ratingDiv);
     }
@@ -160,6 +185,7 @@ const syncStorageFromDom = () => {
 
         const imageEl = item.querySelector(".cart-item-image img");
         const ratingEl = item.querySelector(".stars");
+        const subtitleEl = item.querySelector(".subtitle");
         const ratingCountEl = item.querySelector(".rating-count");
         const qty = readQuantity(qtyEl);
         for (let i = 0; i < qty; i += 1) {
@@ -168,7 +194,8 @@ const syncStorageFromDom = () => {
                 price: priceEl.textContent,
                 image: imageEl ? imageEl.getAttribute('src') : '',
                 rating: ratingEl ? ratingEl.style.getPropertyValue('--rating') : '0',
-                ratingCount: ratingCountEl ? ratingCountEl.textContent : ''
+                ratingCount: ratingCountEl ? ratingCountEl.textContent : '',
+                subtitle: subtitleEl ? subtitleEl.textContent : ''
             });
         }
     });
@@ -182,7 +209,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (cartItemsContainer) {
         const storedCart = getStoredCart();
+        console.log('Stored cart items:', storedCart);
         const groupedCart = groupCartItems(storedCart);
+        console.log('Grouped cart items:', groupedCart);
 
         cartItemsContainer.innerHTML = "";
 
@@ -192,6 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cartItemsContainer.appendChild(emptyMessage);
         } else {
             groupedCart.forEach((item) => {
+                console.log('Building item:', item);
                 cartItemsContainer.appendChild(buildCartItemElement(item));
             });
         }
@@ -273,6 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     writeQuantity(valueEl, nextValue);
                 }
                 syncStorageFromDom();
+                updateCartDisplay();
                 recalcSummary();
                 return;
             }
@@ -280,6 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (target.classList.contains("qty-increase")) {
                 writeQuantity(valueEl, readQuantity(valueEl) + 1);
                 syncStorageFromDom();
+                updateCartDisplay();
                 recalcSummary();
             }
         });
