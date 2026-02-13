@@ -16,15 +16,89 @@
         <div class="returns">Returns & Orders</div>
         <button onclick="location.href='/checkout/checkout.html'">🛒 Cart</button>
     </header>
-    <div class="product1">
-        <div class="product-card1 box-border size-60 border-0 p-8 border-gray-300 self-center text-center">
-            <img src="../images/product1.jpg" alt="Camera" class="product-image">
-            <h3>Camera</h3>
-            <p>This camera is a high-quality item that meets all your needs and expectations.</p>
-            <p class="price">$69.99</p>
-            <p class="in-stock">In Stock</p>
-        </div>
-    </div>
+    <main class="product-page">
+        <section class="product-hero">
+            <div class="product-media">
+                <img src="" alt="" class="product-image product-image-large">
+            </div>
+            <div class="product-info">
+                <h1 class="product-title"></h1>
+                <p class="product-subtitle"></p>
+                <div class="rating" aria-label="">
+                    <span class="stars" style="--rating: 0;"></span>
+                    <span class="rating-count"></span>
+                </div>
+                <p class="price"></p>
+                <p class="in-stock"></p>
+                <button class="review-btn">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="product-section">
+            <h2>About this item</h2>
+            <ul class="product-bullets">
+            </ul>
+        </section>
+
+        <section class="product-section">
+            <h2>Product description</h2>
+            <p class="product-description"></p>
+        </section>
+
+        <section class="product-section">
+            <h2>Technical details</h2>
+            <div class="spec-grid">
+            </div>
+        </section>
+
+        <section class="product-section">
+            <h2>Customer reviews</h2>
+            <div class="review-summary">
+                <div class="review-score">
+                    <span class="review-average"></span>
+                    <div class="rating" aria-label="">
+                        <span class="stars" style="--rating: 0;"></span>
+                        <span class="rating-count"></span>
+                    </div>
+                    <span class="review-count"></span>
+                </div>
+                <button class="review-btn">Write a review</button>
+            </div>
+            <div class="review-list">
+                <article class="review-card">
+                    <div class="reviewer">Jordan P.</div>
+                    <div class="rating" aria-label="Rated 5 out of 5">
+                        <span class="stars" style="--rating: 5;"></span>
+                    </div>
+                    <h3 class="review-title">Crisp photos and easy to use</h3>
+                    <p class="review-body">The zoom is smooth and the colors look great straight out of the camera.
+                        Battery lasted the whole weekend trip.</p>
+                    <p class="review-date">Reviewed on Feb 9, 2026</p>
+                </article>
+                <article class="review-card">
+                    <div class="reviewer">A. Martinez</div>
+                    <div class="rating" aria-label="Rated 4 out of 5">
+                        <span class="stars" style="--rating: 4;"></span>
+                    </div>
+                    <h3 class="review-title">Great value for the price</h3>
+                    <p class="review-body">Small enough to travel with and the stabilization helps a lot. The screen
+                        could be brighter outdoors but overall it is excellent.</p>
+                    <p class="review-date">Reviewed on Feb 3, 2026</p>
+                </article>
+                <article class="review-card">
+                    <div class="reviewer">Samir K.</div>
+                    <div class="rating" aria-label="Rated 5 out of 5">
+                        <span class="stars" style="--rating: 5;"></span>
+                    </div>
+                    <h3 class="review-title">Perfect for family videos</h3>
+                    <p class="review-body">The low-light shots are impressive and the focus locks quickly. I love the
+                        included memory card.</p>
+                    <p class="review-date">Reviewed on Jan 28, 2026</p>
+                </article>
+            </div>
+        </section>
+    </main>
 </body>
 <script type="module" src="/header.js"></script>
+<script type="module" src="/Products/product-loader.js"></script>
 </html>

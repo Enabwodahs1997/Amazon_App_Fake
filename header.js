@@ -20,15 +20,15 @@ const saveCart = () => {
     }
 };
 
-// Get cart element
-const cartIcon = document.querySelector('.cart-icon');
+// Get cart button - it's in the header
+const cartButton = document.querySelector('header button[onclick*="checkout"]');
 
 // Function to update cart display
-function updateCartDisplay() {
-    if (!cartIcon) {
+export function updateCartDisplay() {
+    if (!cartButton) {
         return;
     }
-    cartIcon.textContent = `🛒 Cart (${cart.length})`;
+    cartButton.textContent = `🛒 Cart (${cart.length})`;
 }
 
 // Function to add item to cart
@@ -53,6 +53,18 @@ function addToCart(event) {
     updateCartDisplay();
 }
 
+// Export function to add item to cart from product details
+export function addItemToCart(name, price) {
+    cart.push({ name, price });
+    saveCart();
+    updateCartDisplay();
+}
+
+// Export function to load cart
+export function getCart() {
+    return cart;
+}
+
 // Restore cart before wiring events so the count is correct.
 cart = loadCart();
 updateCartDisplay();
@@ -61,3 +73,43 @@ updateCartDisplay();
 document.querySelectorAll('.product-card button').forEach(button => {
     button.addEventListener('click', addToCart);
 });
+
+const shippingItems = document.querySelectorAll('.shipping-time');
+if (shippingItems.length) {
+    const addDays = (date, days) => {
+        const next = new Date(date);
+        next.setDate(next.getDate() + days);
+        return next;
+    };
+
+    const formatDate = (date) => date.toLocaleDateString('en-US', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric'
+    });
+
+    const today = new Date();
+
+    shippingItems.forEach(item => {
+        const minDays = Number.parseInt(item.dataset.min, 10);
+        const maxDays = Number.parseInt(item.dataset.max, 10);
+        const mode = item.dataset.mode || 'range';
+
+        if (Number.isNaN(minDays)) {
+            return;
+        }
+
+        if (mode === 'by') {
+            const arriveDate = addDays(today, minDays);
+            item.textContent = `Get it by ${formatDate(arriveDate)}`;
+            return;
+        }
+
+        if (!Number.isNaN(maxDays) && maxDays > minDays) {
+            item.textContent = `Arrives in ${minDays}-${maxDays} days`;
+            return;
+        }
+
+        item.textContent = `Arrives in ${minDays} days`;
+    });
+}

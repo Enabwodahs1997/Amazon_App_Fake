@@ -6,7 +6,7 @@
     <title>Amazon-like Store</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body id="top">
     <header>
         <a class="logo" href="/main.html"><img src="https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png" alt="Amazon" style="height: 40px;"></a>
         <div class="search-bar">
@@ -19,30 +19,257 @@
 
     <div class="products">
         <div class="product-card product1main">
-            <img src="images/product1.jpg" alt="Camera" class="product-image">
-            <h3><a href="/Products/product.html">Camera</a></h3>
+            <a href="/Products/product.html?id=1">
+                <img src="images/product1.jpg" alt="Camera" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=1">Camera</a></h3>
+                <div class="rating" aria-label="Rated 4.6 out of 5">
+                    <span class="stars" style="--rating: 4.6;"></span>
+                    <span class="rating-count">(2,184)</span>
+                </div>
             <p class="price">$69.99</p>
+            <p class="shipping-time" data-min="2" data-max="4" data-mode="range">Delivery in 2-4 days</p>
             <button>Add to Cart</button>
         </div>
         <div class="product-card product2main">
-            <img src="images/product2.jpg" alt="Lotion" class="product-image">
-            <h3>Lotion</h3>
+            <a href="/Products/product.html?id=2">
+                <img src="images/product2.jpg" alt="Lotion" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=2">Lotion</a></h3>
+                <div class="rating" aria-label="Rated 4.1 out of 5">
+                    <span class="stars" style="--rating: 4.1;"></span>
+                    <span class="rating-count">(941)</span>
+                </div>
             <p class="price">$39.99</p>
+            <p class="shipping-time" data-min="3" data-max="5" data-mode="range">Arrives in 3-5 days</p>
             <button>Add to Cart</button>
         </div>
         <div class="product-card product3main">
-            <img src="images/product3.jpg" alt="Man Perfume" class="product-image">
-            <h3>Man Perfume</h3>
+            <a href="/Products/product.html?id=3">
+                <img src="images/product3.jpg" alt="Man Perfume" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=3">Man Perfume</a></h3>
+                <div class="rating" aria-label="Rated 4.8 out of 5">
+                    <span class="stars" style="--rating: 4.8;"></span>
+                    <span class="rating-count">(5,702)</span>
+                </div>
             <p class="price">$29.99</p>
+            <p class="shipping-time" data-min="2" data-mode="by">Get it by Friday</p>
             <button>Add to Cart</button>
         </div>
         <div class="product-card product4main">
-            <img src="images/product4.jpg" alt="Soap" class="product-image">
-            <h3>Soap</h3>
+            <a href="/Products/product.html?id=4">
+                <img src="images/product4.jpg" alt="Soap" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=4">Soap</a></h3>
+                <div class="rating" aria-label="Rated 3.9 out of 5">
+                    <span class="stars" style="--rating: 3.9;"></span>
+                    <span class="rating-count">(412)</span>
+                </div>
             <p class="price">$9.99</p>
+            <p class="shipping-time" data-min="5" data-max="7" data-mode="range">Arrives in 5-7 days</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card product5main">
+            <a href="/Products/product.html?id=5">
+                <img src="images/shampoo.jpeg" alt="Shampoo" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=5">Shampoo</a></h3>
+                <div class="rating" aria-label="Rated 4.3 out of 5">
+                    <span class="stars" style="--rating: 4.3;"></span>
+                    <span class="rating-count">(1,238)</span>
+                </div>
+            <p class="price">$6.99</p>
+            <p class="shipping-time" data-min="2" data-max="3" data-mode="range">Delivery in 2-3 days</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card product6main">
+            <a href="/Products/product.html?id=6">
+                <img src="images/Ultra-Hydrating_Conditioner.png" alt="Conditioner" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=6">Conditioner</a></h3>
+                <div class="rating" aria-label="Rated 4.0 out of 5">
+                    <span class="stars" style="--rating: 4.0;"></span>
+                    <span class="rating-count">(688)</span>
+                </div>
+            <p class="price">$3.99</p>
+            <p class="shipping-time" data-min="4" data-max="6" data-mode="range">Arrives in 4-6 days</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card product7main">
+            <a href="/Products/product.html?id=7">
+                <img src="images/hair_gel.jpg" alt="Hair Gel" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=7">Hair Gel</a></h3>
+                <div class="rating" aria-label="Rated 3.7 out of 5">
+                    <span class="stars" style="--rating: 3.7;"></span>
+                    <span class="rating-count">(319)</span>
+                </div>
+            <p class="price">$14.99</p>
+            <p class="shipping-time" data-min="4" data-mode="by">Get it by Monday</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card product8main">
+            <a href="/Products/product.html?id=8">
+                <img src="images/hair_spray.jpg" alt="Hair Spray" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=8">Hair Spray</a></h3>
+                <div class="rating" aria-label="Rated 4.2 out of 5">
+                    <span class="stars" style="--rating: 4.2;"></span>
+                    <span class="rating-count">(1,004)</span>
+                </div>
+            <p class="price">$14.99</p>
+            <p class="shipping-time" data-min="3" data-max="4" data-mode="range">Delivery in 3-4 days</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card product9main">
+            <a href="/Products/product.html?id=9">
+                <img src="images/bodywash.jpg" alt="Body Wash" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=9">Body Wash</a></h3>
+                <div class="rating" aria-label="Rated 4.5 out of 5">
+                    <span class="stars" style="--rating: 4.5;"></span>
+                    <span class="rating-count">(2,642)</span>
+                </div>
+            <p class="price">$5.99</p>
+            <p class="shipping-time" data-min="2" data-max="5" data-mode="range">Arrives in 2-5 days</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card product10main">
+            <a href="/Products/product.html?id=10">
+                <img src="images/facewash.jpg" alt="Face Wash" class="product-image">
+            </a>
+            <h3><a href="/Products/product.html?id=10">Face Wash</a></h3>
+                <div class="rating" aria-label="Rated 4.4 out of 5">
+                    <span class="stars" style="--rating: 4.4;"></span>
+                    <span class="rating-count">(1,781)</span>
+                </div>
+            <p class="price">$9.99</p>
+            <p class="shipping-time" data-min="3" data-mode="by">Get it by Thursday</p>
             <button>Add to Cart</button>
         </div>
     </div>
+
+    <footer class="site-footer">
+        <a class="back-to-top" href="#top">Back to top</a>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Get to Know Us</h4>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+            </div>
+            <div class="footer-column">
+                <h4>Make Money with Us</h4>
+                <a href="#">Sell products on Amazon</a>
+                <a href="#">Sell on Amazon Business</a>
+                <a href="#">Sell apps on Amazon</a>
+                <a href="#">Become an Affiliate</a>
+                <a href="#">Advertise Your Products</a>
+            </div>
+            <div class="footer-column">
+                <h4>Amazon Payment Products</h4>
+                <a href="#">Amazon Business Card</a>
+                <a href="#">Shop with Points</a>
+                <a href="#">Reload Your Balance</a>
+                <a href="#">Amazon Currency Converter</a>
+            </div>
+            <div class="footer-column">
+                <h4>Let Us Help You</h4>
+                <a href="#">Amazon and COVID-19</a>
+                <a href="#">Your Account</a>
+                <a href="#">Your Orders</a>
+                <a href="#">Shipping Rates & Policies</a>
+                <a href="#">Returns & Replacements</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <img class="footer-logo" src="https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png" alt="Amazon">
+            <div class="footer-locale">
+                <span>English</span>
+                <span>USD - U.S. Dollar</span>
+                <span>United States</span>
+            </div>
+        </div>
+        <div class="footer-services">
+            <div class="service-grid">
+                <a href="#" class="service-item">
+                    <strong>Amazon Music</strong>
+                    <span>Stream millions of songs</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Amazon Ads</strong>
+                    <span>Reach customers wherever they spend time</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>6pm</strong>
+                    <span>Score deals on fashion brands</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>AbeBooks</strong>
+                    <span>Books, art & collectibles</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>ACX</strong>
+                    <span>Audiobook Publishing Made Easy</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Sell on Amazon</strong>
+                    <span>Start a selling account</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Amazon Business</strong>
+                    <span>Everything for your business</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>AmazonGlobal</strong>
+                    <span>Ship orders internationally</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Amazon Web Services</strong>
+                    <span>Scalable cloud computing services</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Audible</strong>
+                    <span>Listen to books & podcasts</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Box Office Mojo</strong>
+                    <span>Find movie box office data</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Goodreads</strong>
+                    <span>Book reviews & recommendations</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>IMDb</strong>
+                    <span>Movies, TV & celebrities</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Kindle Direct Publishing</strong>
+                    <span>Indie digital & print publishing</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Prime Video Direct</strong>
+                    <span>Video distribution made easy</span>
+                </a>
+                <a href="#" class="service-item">
+                    <strong>Shopbop</strong>
+                    <span>Designer fashion brands</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Your Ads Privacy Choices</a>
+            <span>© 1996-2026, Amazon.com, Inc. or its affiliates</span>
+        </div>
+    </footer>
 </body>
 <script type='module' src="/header.js"></script>
 </html>
