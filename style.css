@@ -1,3 +1,5 @@
+@import './colors.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,11 +11,11 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: var(--color-amazon-gray);
     scroll-behavior: smooth;
 }
 header {
-    background-color: #141d29;
+    background-color: var(--color-amazon-header);
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -31,7 +33,7 @@ header {
     display: flex;
 }
 .search-bar button {
-    background-color: #febd69;
+    background-color: var(--color-amazon-search);
     border: none;
     padding: 10px;
     border-radius: 4px;
@@ -77,7 +79,7 @@ header {
     color: inherit;
 }
 .product-card h3 a:hover {
-    color: #c45500;
+    color: var(--color-amazon-dark-orange);
 }
 .rating {
     display: inline-flex;
@@ -85,13 +87,13 @@ header {
     gap: 6px;
     margin: 6px 0 2px;
     font-size: 14px;
-    color: #0f1111;
+    color: var(--color-amazon-text);
 }
 .stars {
     --rating: 0;
     --star-size: 16px;
     --star-color: #d5d9d9;
-    --star-fill: #ffa41c;
+    --star-fill: var(--color-amazon-star);
     display: inline-block;
     font-size: var(--star-size);
     line-height: 1;
@@ -113,7 +115,7 @@ header {
     white-space: nowrap;
 }
 .rating-count {
-    color: #565959;
+    color: var(--color-amazon-text-secondary);
 }
 .product-image {
     width: 100%;
@@ -123,13 +125,13 @@ header {
     margin-bottom: 10px;
 }
 .price {
-    color: #c45500;
+    color: var(--color-amazon-dark-orange);
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0;
 }
 .shipping-time {
-    color: #565959;
+    color: var(--color-amazon-text-secondary);
     font-size: 13px;
     margin-bottom: 10px;
 }
@@ -144,8 +146,8 @@ header {
     font-weight: bold;
 }
 button {
-    background-color: #000000;
-    color: white;
+    background-color: var(--color-amazon-yellow);
+    color: var(--color-amazon-text);
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -153,17 +155,17 @@ button {
     font-weight: bold;
 }
 button:hover {
-    background-color: #eca114;
+    background-color: var(--color-amazon-yellow-hover);
 }
 .site-footer {
-    background-color: #232f3e;
+    background-color: var(--color-amazon-subnav);
     color: #ddd;
     margin-top: 30px;
 }
 .back-to-top {
     display: block;
     text-align: center;
-    background-color: #37475a;
+    background-color: var(--color-amazon-nav-secondary);
     color: #fff;
     text-decoration: none;
     padding: 14px 10px;
@@ -220,7 +222,7 @@ button:hover {
     color: #ccc;
 }
 .footer-services {
-    background-color: #131a22;
+    background-color: var(--color-amazon-header);
     padding: 24px 20px 10px;
 }
 .service-grid {
@@ -250,7 +252,7 @@ button:hover {
     text-decoration: underline;
 }
 .footer-legal {
-    background-color: #131a22;
+    background-color: var(--color-amazon-header);
     padding: 16px 20px 24px;
     text-align: center;
     font-size: 12px;
@@ -292,23 +294,23 @@ button:hover {
 .product-image-large {
     height: 320px;
     object-fit: contain;
-    background-color: #f2f2f2;
+    background-color: var(--color-amazon-gray);
 }
 .product-info {
     text-align: left;
 }
 .product-title {
     font-size: 28px;
-    color: #0f1111;
+    color: var(--color-amazon-text);
     margin-bottom: 6px;
 }
 .product-subtitle {
     font-size: 14px;
-    color: #565959;
+    color: var(--color-amazon-text-secondary);
     margin-bottom: 10px;
 }
 .in-stock {
-    color: #007600;
+    color: var(--color-amazon-success);
     font-weight: bold;
     margin-bottom: 8px;
 }
@@ -321,16 +323,16 @@ button:hover {
 }
 .product-section h2 {
     font-size: 20px;
-    color: #0f1111;
+    color: var(--color-amazon-text);
     margin-bottom: 12px;
 }
 .product-bullets {
     padding-left: 20px;
-    color: #0f1111;
+    color: var(--color-amazon-text);
     line-height: 1.5;
 }
 .product-description {
-    color: #0f1111;
+    color: var(--color-amazon-text);
     line-height: 1.6;
 }
 .spec-grid {
@@ -345,11 +347,11 @@ button:hover {
     border-bottom: 1px solid #eee;
 }
 .spec-label {
-    color: #565959;
+    color: var(--color-amazon-text-secondary);
     font-size: 14px;
 }
 .spec-value {
-    color: #0f1111;
+    color: var(--color-amazon-text);
     font-size: 14px;
     font-weight: 600;
     text-align: right;
@@ -369,15 +371,15 @@ button:hover {
 .review-average {
     font-size: 32px;
     font-weight: bold;
-    color: #0f1111;
+    color: var(--color-amazon-text);
 }
 .review-count {
-    color: #565959;
+    color: var(--color-amazon-text-secondary);
     font-size: 13px;
 }
 .review-btn {
-    background-color: #ffd814;
-    color: #111;
+    background-color: var(--color-amazon-yellow);
+    color: var(--color-amazon-text);
     border: 1px solid #fcd200;
     border-radius: 8px;
     padding: 10px 14px;
@@ -385,7 +387,7 @@ button:hover {
     cursor: pointer;
 }
 .review-btn:hover {
-    background-color: #f7ca00;
+    background-color: var(--color-amazon-yellow-hover);
 }
 .review-list {
     display: grid;
@@ -398,22 +400,22 @@ button:hover {
     padding: 14px 16px;
 }
 .reviewer {
-    color: #565959;
+    color: var(--color-amazon-text-secondary);
     font-size: 12px;
     margin-bottom: 6px;
 }
 .review-title {
     font-size: 16px;
-    color: #0f1111;
+    color: var(--color-amazon-text);
     margin: 6px 0;
 }
 .review-body {
-    color: #0f1111;
+    color: var(--color-amazon-text);
     font-size: 14px;
     line-height: 1.5;
 }
 .review-date {
-    color: #565959;
+    color: var(--color-amazon-text-secondary);
     font-size: 12px;
     margin-top: 8px;
 }

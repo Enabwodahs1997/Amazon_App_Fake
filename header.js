@@ -40,6 +40,9 @@ function addToCart(event) {
 
     const nameEl = productCard.querySelector('h3') || productCard.querySelector('a');
     const priceEl = productCard.querySelector('.price');
+    const imageEl = productCard.querySelector('.product-image');
+    const ratingEl = productCard.querySelector('.stars');
+    const ratingCountEl = productCard.querySelector('.rating-count');
 
     if (!nameEl || !priceEl) {
         return;
@@ -47,15 +50,24 @@ function addToCart(event) {
 
     const productName = nameEl.textContent.trim();
     const productPrice = priceEl.textContent.trim();
+    const productImage = imageEl ? imageEl.getAttribute('src') : '';
+    const productRating = ratingEl ? ratingEl.style.getPropertyValue('--rating') : '0';
+    const productRatingCount = ratingCountEl ? ratingCountEl.textContent.trim() : '';
     
-    cart.push({ name: productName, price: productPrice });
+    cart.push({ 
+        name: productName, 
+        price: productPrice, 
+        image: productImage,
+        rating: productRating,
+        ratingCount: productRatingCount
+    });
     saveCart();
     updateCartDisplay();
 }
 
 // Export function to add item to cart from product details
-export function addItemToCart(name, price) {
-    cart.push({ name, price });
+export function addItemToCart(name, price, image = '', rating = '0', ratingCount = '') {
+    cart.push({ name, price, image, rating, ratingCount });
     saveCart();
     updateCartDisplay();
 }

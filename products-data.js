@@ -2,7 +2,7 @@ export const productsData = [
     {
         id: 1,
         name: "Camera",
-        subtitle: "Compact 4K camera with stabilized zoom and crisp low-light shots.",
+        subtitle: "Compact 4K camera with stabilized 2.7x zoom, crisp low-light shots, 12-hour battery, and 64GB storage included. Perfect for travel and everyday moments.",
         image: "../images/product1.jpg",
         price: "$69.99",
         rating: 4.6,
@@ -29,7 +29,7 @@ export const productsData = [
     {
         id: 2,
         name: "Lotion",
-        subtitle: "Hydrating lotion with vitamin E and natural moisture lock.",
+        subtitle: "Hydrating lotion with vitamin E, shea butter, quick-absorbing formula for all skin types - dermatologist tested, non-greasy, fresh scent lasts all day. 16 fl oz bottle.",
         image: "../images/product2.jpg",
         price: "$39.99",
         rating: 4.1,
@@ -56,7 +56,7 @@ export const productsData = [
     {
         id: 3,
         name: "Man Perfume",
-        subtitle: "Bold woody fragrance with long-lasting wear.",
+        subtitle: "Bold woody fragrance with cedarwood and citrus notes - long-lasting 8-hour scent for sophisticated day or evening wear. Premium 3.4 oz glass bottle with bergamot top notes.",
         image: "../images/product3.jpg",
         price: "$29.99",
         rating: 4.8,
@@ -82,7 +82,7 @@ export const productsData = [
     {
         id: 4,
         name: "Soap",
-        subtitle: "Gentle moisturizing soap bar with natural oils.",
+        subtitle: "Gentle moisturizing soap bar with coconut oil and glycerin - pH balanced for sensitive skin, lasts up to 4 weeks. Creates rich lather, ideal for face and body use.",
         image: "../images/product4.jpg",
         price: "$9.99",
         rating: 3.9,
@@ -109,7 +109,7 @@ export const productsData = [
     {
         id: 5,
         name: "Shampoo",
-        subtitle: "Strengthening shampoo for healthy, shiny hair.",
+        subtitle: "Strengthening keratin-enriched shampoo for healthy, shiny hair - sulfate-free formula safe for color-treated hair. Adds volume without weighing down, botanical scent, 12 fl oz.",
         image: "../images/shampoo.jpeg",
         price: "$6.99",
         rating: 4.3,
@@ -136,7 +136,7 @@ export const productsData = [
     {
         id: 6,
         name: "Conditioner",
-        subtitle: "Ultra-hydrating conditioner for smooth, manageable hair.",
+        subtitle: "Ultra-hydrating conditioner with argan oil for smooth, manageable hair - detangles instantly and reduces frizz, paraben-free. Works with all hair textures, leaves no buildup, 12 fl oz.",
         image: "../images/Ultra-Hydrating_Conditioner.png",
         price: "$3.99",
         rating: 4.0,
@@ -163,7 +163,7 @@ export const productsData = [
     {
         id: 7,
         name: "Hair Gel",
-        subtitle: "Strong-hold styling gel for all-day control.",
+        subtitle: "Strong-hold styling gel for all-day control and definition - non-flaking, alcohol-free formula adds shine without stiffness. Easy to wash out, prevents dryness, 8 oz maximum hold.",
         image: "../images/hair_gel.jpg",
         price: "$14.99",
         rating: 3.7,
@@ -189,7 +189,7 @@ export const productsData = [
     {
         id: 8,
         name: "Hair Spray",
-        subtitle: "Flexible-hold hairspray with humidity resistance.",
+        subtitle: "Flexible-hold hairspray with humidity resistance and natural movement - brushes out easily, light fresh scent, quick-drying. Maintains style all day without stiffness, 10 oz bottle.",
         image: "../images/hair_spray.jpg",
         price: "$14.99",
         rating: 4.2,
@@ -216,7 +216,7 @@ export const productsData = [
     {
         id: 9,
         name: "Body Wash",
-        subtitle: "Refreshing gel body wash with invigorating scent.",
+        subtitle: "Refreshing gel body wash with invigorating menthol and cooling sensation - moisturizing formula creates rich lather, energizing scent. Won't strip natural oils, perfect for daily showers, 18 fl oz.",
         image: "../images/bodywash.jpg",
         price: "$5.99",
         rating: 4.5,
@@ -243,7 +243,7 @@ export const productsData = [
     {
         id: 10,
         name: "Face Wash",
-        subtitle: "Deep cleansing face wash for clear, healthy skin.",
+        subtitle: "Deep cleansing face wash with salicylic acid for clear, healthy skin - unclogs pores, prevents breakouts, oil-free formula. Gentle for daily use morning and night, non-comedogenic, 6 fl oz.",
         image: "../images/facewash.jpg",
         price: "$9.99",
         rating: 4.4,

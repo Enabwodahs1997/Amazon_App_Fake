@@ -64,6 +64,9 @@ const groupCartItems = (items) => {
         grouped.set(key, {
             name: item.name,
             price: item.price,
+            image: item.image || '',
+            rating: item.rating || '0',
+            ratingCount: item.ratingCount || '',
             quantity: 1
         });
     });
@@ -75,14 +78,41 @@ const buildCartItemElement = (item) => {
     const wrapper = document.createElement("div");
     wrapper.className = "cart-item";
 
-    const image = document.createElement("div");
-    image.className = "cart-item-image";
+    const imageContainer = document.createElement("div");
+    imageContainer.className = "cart-item-image";
+    
+    if (item.image) {
+        const img = document.createElement("img");
+        // Adjust path for checkout subdirectory
+        img.src = item.image.startsWith('images/') ? `../${item.image}` : item.image;
+        img.alt = item.name;
+        imageContainer.appendChild(img);
+    }
 
     const details = document.createElement("div");
     details.className = "cart-item-details";
 
     const title = document.createElement("h3");
     title.textContent = item.name;
+
+    // Add rating if available
+    let ratingDiv = null;
+    if (item.rating && item.rating !== '0') {
+        ratingDiv = document.createElement("div");
+        ratingDiv.className = "rating";
+        ratingDiv.setAttribute('aria-label', `Rated ${item.rating} out of 5`);
+        
+        const stars = document.createElement("span");
+        stars.className = "stars";
+        stars.style.setProperty('--rating', item.rating);
+        
+        const ratingCount = document.createElement("span");
+        ratingCount.className = "rating-count";
+        ratingCount.textContent = item.ratingCount || '';
+        
+        ratingDiv.appendChild(stars);
+        ratingDiv.appendChild(ratingCount);
+    }
 
     const price = document.createElement("p");
     price.className = "price";
@@ -106,8 +136,12 @@ const buildCartItemElement = (item) => {
     plus.textContent = "+";
 
     controls.append(minus, qty, plus);
-    details.append(title, price, controls);
-    wrapper.append(image, details);
+    details.append(title);
+    if (ratingDiv) {
+        details.append(ratingDiv);
+    }
+    details.append(price, controls);
+    wrapper.append(imageContainer, details);
 
     return wrapper;
 };
@@ -124,11 +158,17 @@ const syncStorageFromDom = () => {
             return;
         }
 
+        const imageEl = item.querySelector(".cart-item-image img");
+        const ratingEl = item.querySelector(".stars");
+        const ratingCountEl = item.querySelector(".rating-count");
         const qty = readQuantity(qtyEl);
         for (let i = 0; i < qty; i += 1) {
             items.push({
                 name: nameEl.textContent,
-                price: priceEl.textContent
+                price: priceEl.textContent,
+                image: imageEl ? imageEl.getAttribute('src') : '',
+                rating: ratingEl ? ratingEl.style.getPropertyValue('--rating') : '0',
+                ratingCount: ratingCountEl ? ratingCountEl.textContent : ''
             });
         }
     });
@@ -250,6 +290,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (checkoutButton) {
         checkoutButton.addEventListener("click", () => {
             alert("Checkout complete!");
+            localStorage.removeItem("amazon_cart");
+            location.reload();
         });
     }
 

@@ -1,0 +1,34 @@
+:root {
+  /* Header & Navigation */
+  --color-amazon-header: #131921;
+  --color-amazon-subnav: #232f3e;
+  --color-amazon-nav-secondary: #37475a;
+
+  /* Buttons */
+  --color-amazon-yellow: #ffd814;
+  --color-amazon-yellow-hover: #f7ca00;
+  --color-amazon-search: #febd69;
+
+  /* Orange accents */
+  --color-amazon-orange: #ff9900;
+  --color-amazon-star: #ffa41c;
+  --color-amazon-cart-orange: #f08804;
+  --color-amazon-dark-orange: #c45500;
+
+  /* Text */
+  --color-amazon-text: #0f1111;
+  --color-amazon-text-secondary: #565959;
+  --color-amazon-text-tertiary: #cccccc;
+
+  /* Links */
+  --color-amazon-link: #007185;
+  --color-amazon-link-blue: #2162a1;
+
+  /* Badges & Deals */
+  --color-amazon-deal-red: #cc0c39;
+  --color-amazon-success: #007600;
+
+  /* Backgrounds */
+  --color-amazon-gray: #f2f2f2;
+  --color-amazon-white: #ffffff;
+}
