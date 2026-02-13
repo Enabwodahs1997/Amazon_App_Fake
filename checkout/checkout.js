@@ -209,9 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (cartItemsContainer) {
         const storedCart = getStoredCart();
-        console.log('Stored cart items:', storedCart);
         const groupedCart = groupCartItems(storedCart);
-        console.log('Grouped cart items:', groupedCart);
 
         cartItemsContainer.innerHTML = "";
 
@@ -221,7 +219,6 @@ document.addEventListener("DOMContentLoaded", () => {
             cartItemsContainer.appendChild(emptyMessage);
         } else {
             groupedCart.forEach((item) => {
-                console.log('Building item:', item);
                 cartItemsContainer.appendChild(buildCartItemElement(item));
             });
         }

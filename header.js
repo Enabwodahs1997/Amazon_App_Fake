@@ -14,12 +14,34 @@ const loadCart = () => {
 
 const saveCart = () => {
     try {
-        console.log('Saving cart to localStorage:', cart);
         localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     } catch (error) {
         console.warn("Failed to save cart to storage:", error);
     }
 };
+
+const searchInput = document.querySelector('header input[type="text"]');
+const searchButton = document.querySelector('header .search-btn');
+
+if (searchInput) {
+    searchInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            const query = searchInput.value.trim();
+            if (query) {
+                window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
+            }
+        }
+    });
+}
+
+if (searchButton && searchInput) {
+    searchButton.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if (query) {
+            window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
+        }
+    });
+}
 
 // Get cart button - it's in the header
 const cartButton = document.querySelector('header button[onclick*="checkout"]');
@@ -74,10 +96,7 @@ function addToCart(event) {
 
 // Export function to add item to cart from product details
 export function addItemToCart(name, price, image = '', rating = '0', ratingCount = '', subtitle = '') {
-    console.log('addItemToCart received subtitle:', subtitle);
-    const item = { name, price, image, rating, ratingCount, subtitle };
-    console.log('Pushing item to cart:', item);
-    cart.push(item);
+    cart.push({ name, price, image, rating, ratingCount, subtitle });
     saveCart();
     updateCartDisplay();
 }

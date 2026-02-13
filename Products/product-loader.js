@@ -71,11 +71,6 @@ document.querySelector('.review-count').textContent = `${reviewWithText.toLocale
 const addToCartBtn = document.querySelector('.product-info .review-btn');
 if (addToCartBtn) {
     addToCartBtn.addEventListener('click', () => {
-        console.log('Adding to cart:', {
-            name: product.name,
-            subtitle: product.subtitle,
-            subtitleLength: product.subtitle ? product.subtitle.length : 0
-        });
         addItemToCart(
             product.name, 
             product.price, 

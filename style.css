@@ -47,6 +47,9 @@ header {
     padding: 10px;
     border: none;
     border-radius: 4px;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
 }
 .returns {
     margin-right: 20px;
@@ -156,6 +159,16 @@ button {
 }
 button:hover {
     background-color: var(--color-amazon-yellow-hover);
+}
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.search-heading {
+    color: var(--color-amazon-text);
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 .site-footer {
     background-color: var(--color-amazon-subnav);
