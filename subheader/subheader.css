@@ -1,0 +1,45 @@
+.subheader {
+    background-color: var(--color-amazon-subnav);
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.subheader a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+}
+
+.subheader a:hover {
+    background-color: var(--color-amazon-nav-secondary);
+}
+
+.subheader a.active {
+    background-color: var(--color-amazon-nav-secondary);
+    font-weight: 600;
+}
+
+.subheader-all {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: var(--color-amazon-nav-secondary);
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subheader-all:hover {
+    background-color: #485769;
+}

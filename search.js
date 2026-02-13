@@ -12,10 +12,12 @@ if (query) {
     
     // Filter products based on query
     const lowerQuery = query.toLowerCase();
+    const queryTerms = lowerQuery.split(' ');
+    
     const filteredProducts = productsData.filter(product => {
-        return product.name.toLowerCase().includes(lowerQuery) ||
-               product.subtitle.toLowerCase().includes(lowerQuery) ||
-               product.description.toLowerCase().includes(lowerQuery);
+        const searchText = `${product.name} ${product.subtitle} ${product.description}`.toLowerCase();
+        // Match if any query term is found in the product text
+        return queryTerms.some(term => searchText.includes(term));
     });
 
     if (filteredProducts.length === 0) {
