@@ -6,6 +6,12 @@ const query = urlParams.get('q') || '';
 
 const searchHeading = document.querySelector('.search-heading');
 const searchResults = document.getElementById('search-results');
+const searchInput = document.getElementById('keyword-input');
+
+// Set search input value to query
+if (searchInput) {
+    searchInput.value = query;
+}
 
 if (query) {
     searchHeading.textContent = `Search results for "${query}"`;
@@ -15,7 +21,7 @@ if (query) {
     const queryTerms = lowerQuery.split(' ');
     
     const filteredProducts = productsData.filter(product => {
-        const searchText = `${product.name} ${product.subtitle} ${product.description}`.toLowerCase();
+        const searchText = `${product.name} ${product.subtitle} ${product.keywords}`.toLowerCase();
         // Match if any query term is found in the product text
         return queryTerms.some(term => searchText.includes(term));
     });

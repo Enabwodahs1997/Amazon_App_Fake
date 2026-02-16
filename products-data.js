@@ -11,6 +11,7 @@ export const productsData = [
         shippingMin: 2,
         shippingMax: 4,
         shippingMode: "range",
+        keywords: ["camera", "4K", "compact", "travel", "video", "photo"],
         bullets: [
             "4K video recording with ultra-clear color and detail.",
             "2.7x optical zoom with digital stabilization for smooth shots.",
@@ -38,6 +39,7 @@ export const productsData = [
         shippingMin: 3,
         shippingMax: 5,
         shippingMode: "range",
+        keywords: ["lotion", "hydrating", "vitamin E", "shea butter", "skincare", "moisturizer"],
         bullets: [
             "Enriched with vitamin E and shea butter for deep hydration.",
             "Non-greasy formula absorbs quickly into skin.",
@@ -64,6 +66,7 @@ export const productsData = [
         inStock: true,
         shippingMin: 2,
         shippingMode: "by",
+        keywords: ["perfume", "woody", "citrus", "long-lasting", "fragrance", "men"],
         bullets: [
             "Rich blend of cedarwood, sandalwood, and citrus notes.",
             "Long-lasting scent up to 8 hours.",
@@ -91,6 +94,7 @@ export const productsData = [
         shippingMin: 5,
         shippingMax: 7,
         shippingMode: "range",
+        keywords: ["soap", "moisturizing", "coconut oil", "glycerin", "sensitive skin", "pH balanced"],
         bullets: [
             "Made with coconut oil and glycerin for soft skin.",
             "pH balanced formula gentle on sensitive skin.",
@@ -118,6 +122,7 @@ export const productsData = [
         shippingMin: 2,
         shippingMax: 3,
         shippingMode: "range",
+        keywords: ["shampoo", "keratin", "strengthening", "sulfate-free", "color-treated", "botanical"],
         bullets: [
             "Keratin-enriched formula strengthens hair from root to tip.",
             "Sulfate-free and gentle on color-treated hair.",
@@ -145,6 +150,7 @@ export const productsData = [
         shippingMin: 4,
         shippingMax: 6,
         shippingMode: "range",
+        keywords: ["conditioner", "hydrating", "argan oil", "frizz control", "all hair types", "paraben-free","shampoo"],
         bullets: [
             "Deep conditioning treatment with argan oil.",
             "Detangles and reduces frizz instantly.",
@@ -171,6 +177,7 @@ export const productsData = [
         inStock: true,
         shippingMin: 4,
         shippingMode: "by",
+        keywords: ["hair gel", "strong hold", "non-flaking", "alcohol-free", "shine", "styling"],
         bullets: [
             "Maximum hold that lasts all day without flaking.",
             "Non-sticky formula easy to wash out.",
@@ -198,6 +205,7 @@ export const productsData = [
         shippingMin: 3,
         shippingMax: 4,
         shippingMode: "range",
+        keywords: ["hair spray", "flexible hold", "humidity resistant", "quick-drying", "light scent", "styling"],
         bullets: [
             "Flexible hold allows natural movement.",
             "Humidity-resistant formula fights frizz all day.",
@@ -225,6 +233,7 @@ export const productsData = [
         shippingMin: 2,
         shippingMax: 5,
         shippingMode: "range",
+        keywords: ["body wash", "menthol", "cooling sensation", "moisturizing", "energizing scent", "daily use"],
         bullets: [
             "Rich lather cleanses and refreshes skin.",
             "Infused with menthol for a cooling sensation.",
@@ -251,6 +260,7 @@ export const productsData = [
         inStock: true,
         shippingMin: 3,
         shippingMode: "by",
+        keywords: ["face wash", "salicylic acid", "deep cleansing", "acne-prone", "oil-free", "daily use"],
         bullets: [
             "Salicylic acid formula unclogs pores and prevents breakouts.",
             "Gentle enough for daily use, morning and night.",

@@ -17,11 +17,81 @@
         <button onclick="location.href='/checkout/checkout.html'">🛒 Cart</button>
     </header>
 
-    <div class="search-container">
-        <h2 class="search-heading"></h2>
-        <div class="products" id="search-results">
-            <!-- Search results will be inserted here -->
+    <div class="flex max-w-screen-xl mx-auto px-4 gap-6 mt-5">
+        <div class="search-results-container flex-1">
+            <h2 class="search-heading"></h2>
+            <div class="products" id="search-results"></div>
         </div>
+
+        <aside class="rightsidebar w-80 hidden lg:block">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Today's Deals</h3>
+                <div class="grid grid-cols-1 gap-3">
+                    <a href="/Products/product.html" class="sidebar-link">
+                        <span class="sidebar-icon">🏷️</span>
+                        <span>Up to 50% off select items</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Shop by Category</h3>
+                <div class="grid grid-cols-1 gap-3">
+                    <a href="/search.html?q=lotion%20soap%20face%20wash%20body%20wash" class="sidebar-link">
+                        <span class="sidebar-icon">💄</span>
+                        <span>Beauty & Personal Care</span>
+                    </a>
+                    <a href="/search.html?q=shampoo%20conditioner%20hair%20gel%20hair%20spray" class="sidebar-link">
+                        <span class="sidebar-icon">💇</span>
+                        <span>Hair Care</span>
+                    </a>
+                    <a href="/search.html?q=camera" class="sidebar-link">
+                        <span class="sidebar-icon">📷</span>
+                        <span>Electronics</span>
+                    </a>
+                    <a href="/search.html?q=perfume" class="sidebar-link">
+                        <span class="sidebar-icon">🌸</span>
+                        <span>Fragrances</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Customer Service</h3>
+                <div class="grid grid-cols-1 gap-3">
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">❓</span>
+                        <span>Help & Customer Service</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">🎁</span>
+                        <span>Gift Cards</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">📝</span>
+                        <span>Registry & Lists</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Amazon Services</h3>
+                <div class="grid grid-cols-1 gap-3">
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">🛍️</span>
+                        <span>Amazon Business</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">💳</span>
+                        <span>Amazon Pay</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon">📦</span>
+                        <span>Sell on Amazon</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
     </div>
 
     <footer class="site-footer">

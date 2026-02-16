@@ -66,9 +66,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px 0;
 }
 .product-card {
     background: white;
@@ -169,6 +167,67 @@ button:hover {
     color: var(--color-amazon-text);
     font-size: 24px;
     margin-bottom: 20px;
+}
+
+.rightsidebar {
+    background-color: var(--color-amazon-white);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside {
+    background-color: var(--color-amazon-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-section {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-amazon-text);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    color: var(--color-amazon-link);
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+    margin-bottom: 8px;
+}
+
+.sidebar-link:hover {
+    background-color: #f0f0f0;
+    color: var(--color-amazon-link-blue);
+}
+
+.sidebar-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.sidebar-link span:last-child {
+    flex: 1;
 }
 .site-footer {
     background-color: var(--color-amazon-subnav);
