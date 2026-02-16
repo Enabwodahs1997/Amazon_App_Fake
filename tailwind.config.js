@@ -1,9 +1,12 @@
 export default {
   content: [
-    "./main.html",
+    "./*.html",
     "./checkout/**/*.html",
     "./Products/**/*.html",
-    "./**/*.js"
+    "./*.js",
+    "./checkout/**/*.js",
+    "./Products/**/*.js",
+    "./subheader/**/*.js"
   ],
   theme: {
     extend: {}
