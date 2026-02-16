@@ -16,10 +16,16 @@
 	<body>
 		<div class="page">
 			<header class="topbar">
-				<div class="logo">Amo<span>zon</span></div>
+				<a class="logo" href="../main.html">
+					<img
+						src="https://assets.aboutamazon.com/2e/d7/ac71f1f344c39f8949f48fc89e71/amazon-logo-squid-ink-smile-orange.png"
+						alt="Amazon"
+						style="height: 40px;"
+					/>
+				</a>
 				<div class="search">
 					<input type="text" placeholder="Search orders, items, and help" />
-					<button>Search</button>
+					<button class="search-btn">Search</button>
 				</div>
 				<div class="top-actions">
 					<span>Hello, Alex</span>
@@ -86,7 +92,7 @@
 
 				<section class="card">
 					<h2>Recent orders</h2>
-					<div class="order">
+					<div class="order"> <!-- Example order items that are hard coded because I didn't feel the need to make it update it just was more complicated than I wanted to get into for a small class project -->
 						<article class="order-item">
 							<div class="thumb"></div>
 							<div class="order-meta">
@@ -115,5 +121,6 @@
 				</section>
 			</main>
 		</div>
+		<script type="module" src="/header.js"></script>
 	</body>
 </html>
